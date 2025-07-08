@@ -9,17 +9,17 @@ Vous devez faire une application web qui effectuera une série de soumissions si
 
 #### _Voici les questions à poser, exactement dans cet ordre :_
 
-- [ ] Quel est votre genre `var genre` ?
-- [ ] Quel est votre date de naissance `var birt_date`?
-- [ ] Quelle est la valeur d'achat de votre véhicule `var vehicle_cost` ?
-- [ ] Quelle est l'année de fabrication de votre véhicule `var  vehicle_date` ?
-- [ ] Combien de kilomètres parcourez-vous par année `var millage`?
-- [ ] Est-ce que votre véhicule possède une caméra de recul `var have_back_cam`?
-- [ ] Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non) `var have_reclam`
- Si oui, on demande les questions suivantes `var num_reclam` :
+- [ ] Quel est votre genre `var gender` ?
+- [ ] Quel est votre date de naissance `var userBirthDate`?
+- [ ] Quelle est la valeur d'achat de votre véhicule `var carCost` ?
+- [ ] Quelle est l'année de fabrication de votre véhicule `var yearFabric` ?
+- [ ] Combien de kilomètres parcourez-vous par année `var mileage`?
+- [ ] Est-ce que votre véhicule possède une caméra de recul `var haveBackupCam`?
+- [ ] Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non) `var haveReclam`
+ Si oui, on demande les questions suivantes `var numReclam` :
    - [ ] Combien de réclamations avez-vous faites?
    Ensuite, pour chaque réclamation, on demande (remplacer x par le numéro) :
-      - [ ] Pour la réclamation `#x`, quel montant avez-vous réclamé? `var total_reclam`
+      - [ ] Pour la réclamation `#x`, quel montant avez-vous réclamé? `var totalReclam`
 
 #### _Voici les cas qui ne sont pas assurés :_
 
