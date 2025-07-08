@@ -9,21 +9,22 @@ Vous devez faire une application web qui effectuera une série de soumissions si
 
 #### _Voici les questions à poser, exactement dans cet ordre :_
 
-- [ ] Quel est votre genre?
-- [ ] Quel est votre date de naissance?
-- [ ] Quelle est la valeur d'achat de votre véhicule?
-- [ ] Quelle est l'année de fabrication de votre véhicule?
-- [ ] Combien de kilomètres parcourez-vous par année?
-- [ ] Est-ce que votre véhicule possède une caméra de recul?
-- [ ] Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non)
-   - [ ] Si oui, on demande les questions suivantes :
-      - [ ] Combien de réclamations avez-vous faites?
-   - [ ] Ensuite, pour chaque réclamation, on demande (remplacer x par le numéro) :
-      - [ ] Pour la réclamation `#x`, quel montant avez-vous réclamé?
+- [ ] Quel est votre genre `var genre` ?
+- [ ] Quel est votre date de naissance `var birt_date`?
+- [ ] Quelle est la valeur d'achat de votre véhicule `var vehicle_cost` ?
+- [ ] Quelle est l'année de fabrication de votre véhicule `var  vehicle_date` ?
+- [ ] Combien de kilomètres parcourez-vous par année `var millage`?
+- [ ] Est-ce que votre véhicule possède une caméra de recul `var have_back_cam`?
+- [ ] Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non) `var have_reclam`
+ Si oui, on demande les questions suivantes `var num_reclam` :
+   - [ ] Combien de réclamations avez-vous faites?
+   Ensuite, pour chaque réclamation, on demande (remplacer x par le numéro) :
+      - [ ] Pour la réclamation `#x`, quel montant avez-vous réclamé? `var total_reclam`
 
 #### _Voici les cas qui ne sont pas assurés :_
+
 - [ ]  Les femmes de moins de 16 ans.
-- [ ] Les hommes de moins de 18 ans.
+- [ ]  Les hommes de moins de 18 ans.
 - [ ]  Une personne non-binaire de moins de 18 ans.
 - [ ]  Les personnes de 100 ans ou plus.
 - [ ]  Un véhicule de plus de 25 ans.
@@ -32,7 +33,6 @@ Vous devez faire une application web qui effectuera une série de soumissions si
 - [ ]  Une personne avec plus de 35 000$ de réclamation.
 - [ ]  Une personne qui parcourt plus de 50000 km par année.
 - [ ]  Un véhicule qui n'a pas de caméra de recul.
-
 
 #### _Voici un tableau représentant la logique de calcul du montant de base :_
 
