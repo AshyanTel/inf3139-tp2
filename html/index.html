@@ -8,44 +8,45 @@
    <body>
    <h1>Rob Auto</h1>
       <form>
-         <label for="q1">Quel est votre genre? : </label>
-         <select id="genre" name="genreUtilisateur">
-               <option value="1">Homme</option>
-               <option value="2">Femme</option>
-               <option value="3">Non-binaire</option>
+         <label for="gender">
+            Quel est votre genre? :
+         </label>
+         <select type="text" id="gender" name="userGender" required>
+            <option value="1">Homme</option>
+            <option value="2">Femme</option>
+            <option value="3">Non-binaire</option>
          </select>
          <br/>
-
-         <label for="date" name="dateNaissance">
+         <label for="userBirthDate">
             Quel est votre date de naissance? (Format JJ-MM-YYYY) :
          </label>
-         <input type="date" id="date" size="35">
+         <input type="date" id="birth" name="userBirthDate" required>
          <br/>
 
-         <label for="valeur" name="valeurAchat">
+         <label for="carCost">
             Quelle est la valeur d'achat de votre véhicule?
          </label>
-         <input type="text" id="valeur" size="35">
+         <input type="text" id="carCost" name="carCost">
          <br/>
 
-         <label for="annee" name="annéeAchat">
+         <label for="yearFabric">
             Quelle est l'année de fabrication de votre véhicule?
          </label>
-         <input type="text" id="annee" size="35">
+         <input type="text" id="year" name="Fabric">
          <br/>
 
-         <label for="kilometres" name="kmParcourus">
+         <label for="mileage">
             Combien de kilomètres parcourez-vous par année?
          </label>
-         <input type="text" id="kilometres" size="35">
+         <input type="text" id="mileage" name="mileage">
          <br/>
 
-         <label for="camera" name="possedeCamera">
+         <label for="haveBackupCam">
             Est-ce que votre véhicule possède une caméra de recul?
          </label>
-         <select id="camera" name="possedeCamera">
-               <option value="oui">Oui</option>
-               <option value="Non">Non</option>
+         <select id="cam"  name="haveBackupCam">
+               <option value="true">Oui</option>
+               <option value="false">Non</option>
          </select>
          <br/>
       </form>
