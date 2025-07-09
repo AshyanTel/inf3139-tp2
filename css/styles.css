@@ -1,0 +1,97 @@
+:root { 
+   /* Couleurs */
+   --background: hsl(0, 0%, 98%);
+   --surface: #e8e8e8;           /* platine */
+   --border: #8e4a49;    /* cordovan */
+   --text-primary: #1d201f;      /* eerie black */
+   --text-secondary: #bfbfbf;            /* silver */
+   --accent: #1f7a8c;            /* teal */
+   --accent-hover: #16616f;      /* dark teal */
+
+   /* Polices */
+   --font-family: 'Roboto', sans-serif;
+   --font-family-title: 'Merriweather';
+   --font-family-header: 'Nunito Sans', sans-serif;
+
+   /* Espacement et bordures */
+   --padding-page: 12vw;
+   --padding-element: 20px;
+   --border-radius: 4px;
+
+} 
+
+body {
+   font-size: 110%;
+   background-color: var(--background);
+   color: var(--text-primary);
+   font-family : var(--font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--font-family-title);
+   color: var(--accent-hover);
+}
+
+h3, p {
+   margin: 30px 10vw 0 10vw;
+}
+
+header {
+   margin: -21px -21px 0 -21px;
+   position:sticky;
+   padding:20px;
+   text-align: center;
+   background-color: var(--accent);
+   /*
+   margin:0vw 10vw 30px 10vw;
+   border: 5px solid var(--border);
+   border-radius: 15px;
+   */
+   box-shadow: 2px 2px 5px #3a3c3d;
+}
+
+
+h2 {
+   font-size: 125%;
+   font-family: var(--font-family-);
+   font-style: italic;
+   text-shadow: 1px 1px 3px var(--accent-hover);
+   color: var(--text-secondary)
+}
+
+header h1 {
+   font-family: var(--font-family-header);
+   color: var(--background);
+   font-size: 175%;
+   text-shadow: 1px 1px 3px var(--background);
+}
+
+form {
+   margin: 30px 15vw 30px 15vw;
+   padding: 10px 40px 10px 40px;
+   border: 2px solid var(--border);
+   border-radius: 10px;
+}
+
+.quest {
+   margin-top: 10px;
+   flex: auto;
+}
+
+
+
+label {
+   width: 25vw;
+   display:inline-block;
+}
+
+input[type=submit] {
+   float: right;
+}
+
+@media screen and (max-width: 600px){
+   .label, .quest, .field {
+      width: 100%;
+   }
+}
+
