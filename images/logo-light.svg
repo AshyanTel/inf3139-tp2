@@ -42,7 +42,7 @@
      transform="translate(-56.422324,-24.986714)">
     <path
        sodipodi:type="star"
-       style="fill:#d2c1b6;fill-opacity:0;stroke:#d2c1b6;stroke-width:10;stroke-opacity:1"
+       style="fill:#d2c1b6;fill-opacity:0;stroke:#e8e8e8;stroke-width:10;stroke-opacity:1"
        id="path1"
        inkscape:flatsided="true"
        sodipodi:sides="5"
@@ -61,7 +61,7 @@
        inkscape:label="path1" />
     <path
        sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:0;stroke:#1b3c53;stroke-width:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:0;stroke:#1f7a8c;stroke-width:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4"
        inkscape:flatsided="true"
        sodipodi:sides="5"
