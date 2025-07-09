@@ -4,64 +4,82 @@
       <meta charset="utf-8" />
       <script src="../script.js"></script>
       <link rel="stylesheet" href="../css/styles.css">
-      <link rel="stylesheet" href="../css/form.css">
       <link rel="icon" href="../images/logo-light.svg" media="(prefers-color-scheme: light)">
       <link rel="icon" href="../images/logo-dark.svg" media="(prefers-color-scheme: dark)">
 
       <title>Descarcasses Assurances</title>
    </head>
    <body>
-   
-   <h1>Descarcasses Assurances</h1>
-   <p>Parce que les bouchons peuvent aussi Administratif.</p>
+   <header>
+      <h1>title</h1>
+      <h2>slogan</h2>
+   </header>
+      <h3>
+         Obtenez une soumission personnalisée en quelques clics&nbsp!
+      </h3>
+      <p>
+         Remplissez le formulaire ci-dessous pour que nous puissions vous offrir une couverture sur mesure, au meilleur tarif,
+         selon votre véhicule, votre profil et vos habitudes de conduite.
+      </p>
+      <p>
+         N’attendez pas le dernier moment pour vous assurer. Profitez dès maintenant de nos offres avantageuses et partez l’esprit tranquille&nbsp!
+      </p>
       <form>
-         <label for="gender">
-            Quel est votre genre ?
-         </label>
-         <br/>
-         <select type="text" id="gender" name="userGender" required>
-            <option value="1">Homme</option>
-            <option value="2">Femme</option>
-            <option value="3">Non-binaire</option>
-         </select>
-         <br/>
-         <label for="userBirthDate">
-            Quel est votre date de naissance ? (Format JJ-MM-YYYY)
-         </label>
-         <br/>
-         <input type="date" id="birth" name="userBirthDate" required>
-         <br/>
 
-         <label for="carCost">
-            Quelle est la valeur d'achat de votre véhicule ?
-         </label>
-         <br/>
-         <input type="text" id="carCost" name="carCost">
-         <br/>
+         <!--question 1-->
+         <div class="row">  
+            <label for="gender" class="quest">
+               Quel est votre genre&nbsp?
+            </label>
+            <select type="text" id="gender" name="userGender" required>
+               <option value="1">Homme</option>
+               <option value="2">Femme</option>
+               <option value="3">Non-binaire</option>
+            </select>
+         </div>
 
-         <label for="yearFabric">
-            Quelle est l'année de fabrication de votre véhicule ?
-         </label>
-         <br/>
-         <input type="text" id="year" name="yearFabric">
-         <br/>
+         <!--question 2-->
+         <div class="row">
+            <label for="userBirthDate" class="quest">
+               Quel est votre date de naissance&nbsp?
+            </label>
+            <input type="date" id="birth" name="userBirthDate" required>
+         </div>
 
-         <label for="mileage">
-            Combien de kilomètres parcourez-vous par année ?
-         </label>
-         <br/>
-         <input type="text" id="mileage" name="mileage">
-         <br/>
+         <!--question 3-->
+         <div class="row">
+            <label for="carCost" class="quest">
+               Quelle est la valeur d'achat de votre véhicule&nbsp?
+            </label>
+            <input type="number" id="carCost" name="carCost">
+         </div>
 
-         <label for="haveBackupCam">
-            Est-ce que votre véhicule possède une caméra de recul ?
-         </label>
-         <br/>
-         <select id="cam"  name="haveBackupCam">
-               <option value="true">Oui</option>
-               <option value="false">Non</option>
-         </select>
-         <br/>
+         <!--question 4-->
+         <div class="row">
+            <label for="yearFabric" class="quest">
+               Quelle est l'année de fabrication de votre véhicule&nbsp?
+            </label>
+            <input type="text" id="year" name="yearFabric">
+         </div>
+
+         <!--question 5-->
+         <div class="row">
+            <label for="mileage" class="quest">
+               Combien de kilomètres parcourez-vous par année&nbsp?
+            </label>
+            <input type="number" id="mileage" name="mileage">
+         </div>
+
+         <!--question 6-->
+         <div class="row">
+            <label for="haveBackupCam" class="quest">
+               Est-ce que votre véhicule possède une caméra de recul&nbsp?
+            </label>
+            <select id="cam"  name="haveBackupCam">
+                  <option value="true">Oui</option>
+                  <option value="false">Non</option>
+            </select>
+         </div>
       </form>
    </body>
 </html>
