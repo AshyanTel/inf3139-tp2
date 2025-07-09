@@ -1,0 +1,20 @@
+:root {
+    /* Couleurs */
+    --background: rgb(249, 243, 239);
+    --background-secondary: rgb(210, 193, 182);
+    --primary: rgb(69, 104, 130);
+    --secondary: rgb(27, 60, 83);
+    --highlight: rgb(221, 168, 83);
+
+    /* Polices */
+    --font-family: 'Roboto', sans-serif;
+    --font-family-title: 'Merriweather';
+    --font-family-header: 'Merriweather';
+
+    /* Espacement et bordures */
+    --padding-page: 10vw;
+    --padding-element: 20px;
+    --padding-table: 10px;
+    --border-radius: 4px;
+
+}
