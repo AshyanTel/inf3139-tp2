@@ -62,6 +62,30 @@
                <option value="false">Non</option>
          </select>
          <br/>
+
+         <label for="hasReclamation">
+            Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non) 
+         </label>
+         <br/>
+         <select type="text" id="hasReclamation" name="hasReclamation" required>
+               <option value="true">Oui</option>
+               <option value="false">Non</option>
+         </select>
+         <br/>
+
+         <label for="numReclamation" name="numReclamation" required>
+            Combien de réclamations avez-vous faites?
+         </label>
+         <br/>
+         <input type="text" id="numReclamation" name="numReclamation">
+         <br/>
+
+         <label for="amount">
+            Pour la réclamation #x, quel montant avez-vous réclamé?
+         </label>
+         <br/>
+         <input type="text" id="amount" name="amount">
+         <br/>
       </form>
    </body>
 </html>
