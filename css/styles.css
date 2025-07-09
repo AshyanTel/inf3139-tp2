@@ -78,7 +78,9 @@ form {
    flex: auto;
 }
 
-
+.haveClaim{
+   /*display: none*/
+}
 
 label {
    width: 25vw;

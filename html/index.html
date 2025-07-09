@@ -19,13 +19,12 @@
       </h3>
       <p>
          Remplissez le formulaire ci-dessous pour que nous puissions vous offrir une couverture sur mesure, au meilleur tarif,
-         selon votre véhicule, votre profil et vos habitudes de conduite.
+         selon votre véhicule, votre profil et vos habitudes de conduite.s
       </p>
       <p>
          N’attendez pas le dernier moment pour vous assurer. Profitez dès maintenant de nos offres avantageuses et partez l’esprit tranquille&nbsp!
       </p>
       <form>
-
          <!--question 1-->
          <div class="row">  
             <label for="gender" class="quest">
@@ -54,13 +53,39 @@
             <input type="number" id="carCost" name="carCost">
          </div>
 
-<<<<<<< HEAD
          <!--question 4-->
          <div class="row">
             <label for="yearFabric" class="quest">
                Quelle est l'année de fabrication de votre véhicule&nbsp?
             </label>
-            <input type="text" id="year" name="yearFabric">
+            <select type="text" id="numClaim" name="Claim1" required>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                  <option value="2011">2011</option>
+                  <option value="2010">2010</option>
+                  <option value="2009">2009</option>
+                  <option value="2008">2008</option>
+                  <option value="2007">2007</option>
+                  <option value="2006">2006</option>
+                  <option value="2005">2005</option>
+                  <option value="2004">2004</option>
+                  <option value="2003">2003</option>
+                  <option value="2002">2002</option>
+                  <option value="2001">2001</option>
+                  <option value="carTooOld">2000 et avant</option>
+               </select>
          </div>
 
          <!--question 5-->
@@ -78,44 +103,70 @@
             </label>
             <select id="cam"  name="haveBackupCam">
                   <option value="true">Oui</option>
+                  <option value="false">Non</option>A une reclamation d'assurance
+            </select>
+         </div>
+         
+         <!--question 7-->
+         <div class="row">
+            <label for="hasClaim" class="quest">
+               Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années&nbsp?
+            </label>
+            <select type="text" id="hasClaim" name="hasClaim" required>
+                  <option value="true">Oui</option>
                   <option value="false">Non</option>
             </select>
          </div>
-=======
-         <label for="haveBackupCam">
-            Est-ce que votre véhicule possède une caméra de recul ?
-         </label>
-         <br/>
-         <select id="cam"  name="haveBackupCam">
-               <option value="true">Oui</option>
-               <option value="false">Non</option>
-         </select>
-         <br/>
+         
+         <div class="haveClaim">
+            <!--question 7.1-->
+            <div class="row">
+               <label for="numClaim" class="quest">
+                  Combien de réclamations avez-vous faites&nbsp?
+               </label>
+               <select type="text" id="numClaim" name="Claim1" required>
+                  <option value="1">1 réclamation</option>
+                  <option value="2">2 réclamations</option>
+                  <option value="3">3 réclamations</option>
+                  <option value="4">4 réclamations</option>
+                  <option value="tooMuchClaim">5 réclamations ou plus</option>
+               </select>
+            </div>
+            <div class="claims">
+               <!--question 7.1.1-->
+               <div class="row">
+                  <label for="Claim1" class="quest">
+                     Pour la réclamation 1, quel montant avez-vous réclamé&nbsp?
+                  </label>
+                  <input type="number" id="amount" name="Claim1">
+               </div>
 
-         <label for="hasReclamation">
-            Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années? (oui/non) 
-         </label>
-         <br/>
-         <select type="text" id="hasReclamation" name="hasReclamation" required>
-               <option value="true">Oui</option>
-               <option value="false">Non</option>
-         </select>
-         <br/>
+               <!--question 7.1.2-->
+               <div class="row">
+                  <label for="Claim2" class="quest">
+                     Pour la réclamation 2, quel montant avez-vous réclamé&nbsp?
+                  </label>
+                  <input type="number" id="amount" name="Claim2">
+               </div>
 
-         <label for="numReclamation" name="numReclamation" required>
-            Combien de réclamations avez-vous faites?
-         </label>
-         <br/>
-         <input type="text" id="numReclamation" name="numReclamation">
-         <br/>
+               <!--question 7.1.3-->
+               <div class="row">
+                  <label for="Claim3" class="quest">
+                     Pour la réclamation 3, quel montant avez-vous réclamé&nbsp?
+                  </label>
+                  <input type="number" id="amount" name="Claim3">
+               </div>
 
-         <label for="amount">
-            Pour la réclamation #x, quel montant avez-vous réclamé?
-         </label>
-         <br/>
-         <input type="text" id="amount" name="amount">
-         <br/>
->>>>>>> main
+               <!--question 7.1.4-->
+               <div class="row">
+                  <label for="Claim4" class="quest">
+                     Pour la réclamation 4, quel montant avez-vous réclamé&nbsp?
+                  </label>
+                  <input type="number" id="amount" name="Claim4">
+               </div>
+            </div>
+         </div>
+         <input type="submit" value="Submit">
       </form>
    </body>
 </html>
