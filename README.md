@@ -44,7 +44,7 @@ Vous devez faire une application web qui effectuera une série de soumissions si
 
 #### _La formule pour calculer le montant de l'assurance :_
 
-$$\text{Assurance Annuelle} = \text{Montant de base} + 350 \times \text{Nombre de Réclamations} + 0.02 \times \text{kilométrage annuel}$$
+$$\text{Assurance Annuelle} = \text{ratio} \times \text{carCost} + 350 \times \text{numReclam} + 0.02 \times \text{mileage}$$
 
 On ajoute à ce montant une pénalité de **700\$** si la personne a plus de **25 000\$** de réclamation.
 Une fois les données saisies et les calculs complétés, on affiche à l'utilisateur le prix annuel de la soumission d'assurance, ainsi que le montant d'une prime mensuelle.
@@ -74,3 +74,7 @@ Respect des exigences : 60%
 Convivialité du site web : 15%
 Qualité du code : 15%
 Aspect visuel du site : 10%
+
+
+## Sources :
+Le SVG du logo a été réalisé par nos soins sur Inkscape.
