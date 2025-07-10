@@ -19,7 +19,7 @@
       </h3>
       <p>
          Remplissez le formulaire ci-dessous pour que nous puissions vous offrir une couverture sur mesure, au meilleur tarif,
-         selon votre véhicule, votre profil et vos habitudes de conduite.s
+         selon votre véhicule, votre profil et vos habitudes de conduites
       </p>
       <p>
          N’attendez pas le dernier moment pour vous assurer. Profitez dès maintenant de nos offres avantageuses et partez l’esprit tranquille&nbsp!
@@ -44,6 +44,7 @@
                Quel est votre date de naissance&nbsp?
             </label>
             <input type="date" id="birth" name="userBirthDate" required>
+            <div class="err" id="err_age"></div>
          </div>
 
          <!--question 3-->
@@ -52,6 +53,7 @@
                Quelle est la valeur d'achat de votre véhicule&nbsp?
             </label>
             <input type="number" id="carCost" name="carCost">
+            <div class="err" id="err_carPrice"></div>
          </div>
 
          <!--question 4-->
@@ -96,6 +98,7 @@
                Combien de kilomètres parcourez-vous par année&nbsp?
             </label>
             <input type="number" id="mileage" name="mileage">
+            <div class="err" id="err_mileage"></div>
          </div>
 
          <!--question 6-->
@@ -142,6 +145,7 @@
                      Pour la réclamation 1, quel montant avez-vous réclamé&nbsp?
                   </label>
                   <input type="number" id="amount" name="Claim1">
+                  <div class="err" id="err_Claim1"></div>
                </div>
 
                <!--question 7.1.2-->
@@ -150,6 +154,7 @@
                      Pour la réclamation 2, quel montant avez-vous réclamé&nbsp?
                   </label>
                   <input type="number" id="amount" name="Claim2">
+                  <div class="err" id="err_Claim2"></div>
                </div>
 
                <!--question 7.1.3-->
@@ -158,6 +163,7 @@
                      Pour la réclamation 3, quel montant avez-vous réclamé&nbsp?
                   </label>
                   <input type="number" id="amount" name="Claim3">
+                  <div class="err" id="err_Claim3"></div>
                </div>
 
                <!--question 7.1.4-->
@@ -166,12 +172,162 @@
                      Pour la réclamation 4, quel montant avez-vous réclamé&nbsp?
                   </label>
                   <input type="number" id="amount" name="Claim4">
+                  <div class="err" id="err_Claim4"></div>
                </div>
             </div>
          </div>
          <div class="row">
-         <button type="submit" value="Submit">Soumission</button>
+            <button type="submit" value="Submit">Soumission</button>
          </div>
+         
       </form>
+      <script>
+            var birth = document.getElementById("birth");
+            birth.addEventListener("blur", function() {
+               var birthDate = new Date(birthInput.value);
+               var today = new Date();
+               var future = false;
+               if(today.getFullYear() < birthDate.getFullYear()){
+                  future = true;
+               } else if (today.getFullYear() == birthDate.getFullYear()){
+                  if(today.getMonth() < birthDate.getMonth()){
+                     future = true;
+                  }else if(today.getMonth() == birthDate.getMonth()){
+                     if(today.getDate() <= birthDate.getDate()){
+                        future = true;
+                     }
+                  }
+               }
+
+               if(future == true) {
+                  document.getElementById("err_age").textContent = "La date de naissance ne peut pas être dans le futur";
+               } else {
+                  document.getElementById("err_age").textContent = "";
+               }
+            });
+
+            costInput = document.getElementById("carCost");
+            costInput.addEventListener("blur", function () {
+               if (costInput.value == "" || costInput.value < 0 || isNaN(costInput.value)) {
+                  document.getElementById("err_carPrice").textContent = "Le prix doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_carPrice").textContent = "";
+               }
+            });
+
+            mileageInput = document.getElementById("mileage");
+            mileageInput.addEventListener("blur", function () {
+               if (mileageInput.value == "" || mileageInput.value < 0 || isNaN(mileageInput.value)) {
+                  document.getElementById("err_mileage").textContent = "Le kilométrage doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_mileage").textContent = "";
+               }
+            });
+
+            firstClaimInput = document.getElementById("Claim1");
+            firstClaimInput.addEventListener("blur", function () {
+               if (firstClaimInput.value == "" || firstClaimInput.value < 0 || isNaN(firstClaimInput.value)) {
+                  document.getElementById("err_Claim1").textContent = "Le montant doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_Claim1").textContent = "";
+               }
+            });
+
+            secondClaimInput = document.getElementById("Claim2");
+            secondClaimInput.addEventListener("blur", function () {
+               if (secondClaimInput.value == "" || secondClaimInput.value < 0 || isNaN(secondClaimInput.value)) {
+                  document.getElementById("err_Claim2").textContent = "Le montant doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_Claim2").textContent = "";
+               }
+            });
+
+            thirdClaimInput = document.getElementById("Claim3");
+            thirdClaimInput.addEventListener("blur", function () {
+               if (thirdClaimInput.value == "" || thirdClaimInput.value < 0 || isNaN(thirdClaimInput.value)) {
+                  document.getElementById("err_Claim3").textContent = "Le montant doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_Claim3").textContent = "";
+               }
+            });
+
+            fourthClaimInput = document.getElementById("Claim4");
+            fourthClaimInput.addEventListener("blur", function () {
+               if (fourthClaimInput.value == "" || fourthClaimInput.value < 0 || isNaN(fourthClaimInput.value)) {
+                  document.getElementById("err_Claim4").textContent = "Le montant doit être un nombre positif.";
+               } else {
+                  document.getElementById("err_Claim4").textContent = "";
+               }
+            });
+
+            document.getElementById("Form").addEventListener("submit", function(event) {
+
+               event.preventDefault();
+               genderSelect = document.getElementById("gender").value;
+               birthInput = document.getElementById("birth").value;
+               costInput = document.getElementById("carCost").value;
+               yearSelect = document.getElementById("yearFabric").value;
+               mileageInput = document.getElementById("mileage").value;
+               backupCamSelect = document.getElementById("cam").value;
+               claimSelect = document.getElementById("hasClaim").value;
+               numClaimSelect = document.getElementById("numClaim").value;
+
+               
+               firstClaimInput = document.getElementById("Claim1").value;
+               secondClaimInput = document.getElementById("Claim2").value;
+               thirdClaimInput = document.getElementById("Claim3").value;
+               fourthClaimInput = document.getElementById("Claim4").value;
+               totalReclam = firstClaimInput + secondClaimInput + thirdClaimInput + fourthClaimInput;
+
+
+               
+               if(genderSelect == "femme" || age < 16) {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(genderSelect == "homme" || age < 18) {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(genderSelect == "non-binaire" || age < 18) {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(age >= 100) {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(yearSelect == "carTooOld") {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(costInput > 100000 &&  mileageInput > 50000) {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else if(numClaimSelect == "tooMuchClaim" && backupCamSelect == "false") {
+                  message = `vous n'êtes pas éligible à notre assurance`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               } 
+               else {
+                  if(genderSelect == "homme" || age < 25) {
+                     assuranceAnnuelle = 0.05*costInput + 350*numClaimSelect + 0.02*mileageInput;
+                  } else if(genderSelect == "non-binaire" || age < 25) {
+                     assuranceAnnuelle = 0.05*costInput + 350*numClaimSelect + 0.02*mileageInput;
+                  } else if(age>75) {
+                     assuranceAnnuelle = 0.04*costInput + 350*numClaimSelect + 0.02*mileageInput;
+                  } else {
+                     assuranceAnnuelle = 0.015*costInput + 350*numClaimSelect + 0.02*mileageInput;
+                  }
+
+                  if(totalReclam > 25000) {
+                     assuranceAnnuelle = assuranceAnnuelle + 700;
+                  }
+
+                  message = `Le montant de votre assurance s'élève à ${assuranceAnnuelle}$.`;
+                  document.getElementById("err_value_nom_de_la_var").textContent = message;
+               }
+            });
+      </script>
    </body>
 </html>

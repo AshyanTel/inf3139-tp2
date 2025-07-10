@@ -79,7 +79,9 @@ form {
    /*display: none*/
 }
 
-
+.err{
+   color : var(--border);
+}
 
 label {
    display:inline-block;
