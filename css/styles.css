@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3, p {
+   font-size: 110%;
    margin: 30px 10vw 0 10vw;
 }
 
@@ -42,11 +43,6 @@ header {
    padding:20px;
    text-align: center;
    background-color: var(--accent);
-   /*
-   margin:0vw 10vw 30px 10vw;
-   border: 5px solid var(--border);
-   border-radius: 15px;
-   */
    box-shadow: 2px 2px 5px #3a3c3d;
 }
 
@@ -69,8 +65,9 @@ header h1 {
 form {
    margin: 30px 15vw 30px 15vw;
    padding: 10px 40px 10px 40px;
-   border: 2px solid var(--border);
-   border-radius: 10px;
+   border: 2px solid var(--accent);
+   border-radius: 4px;
+   background-color: var(--surface);
 }
 
 .quest {
@@ -82,13 +79,39 @@ form {
    /*display: none*/
 }
 
+
+
 label {
-   width: 25vw;
    display:inline-block;
 }
 
-input[type=submit] {
+input, select{
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: var(--background);
+   border: 2px solid var(--accent);
+   border-radius: 2px;
+   box-sizing: border-box;
+   margin: 8px;
+   width: 100%;
+}
+
+input::focus, select::focus{
+   border-color: var(--accent-hover);
+}
+
+input[type=submit]  {
    float: right;
+}
+
+button{
+   width: 100%;
+   font-family: var(--font-family-header) ;
+   padding: 10px 20px;
+   color: var(--background);
+   background-color: var(--accent);
+   border: 2px solid var(--accent);
+   border-radius: 2px;
 }
 
 @media screen and (max-width: 600px){

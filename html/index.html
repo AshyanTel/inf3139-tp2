@@ -31,6 +31,7 @@
                Quel est votre genre&nbsp?
             </label>
             <select type="text" id="gender" name="userGender" required>
+               <option disabled selected value> -- Choisissez une option -- </option>
                <option value="1">Homme</option>
                <option value="2">Femme</option>
                <option value="3">Non-binaire</option>
@@ -58,7 +59,8 @@
             <label for="yearFabric" class="quest">
                Quelle est l'année de fabrication de votre véhicule&nbsp?
             </label>
-            <select type="text" id="numClaim" name="Claim1" required>
+            <select id="numClaim" name="Claim1" required>
+                  <option disabled selected value> -- Choisissez une option -- </option>
                   <option value="2025">2025</option>
                   <option value="2024">2024</option>
                   <option value="2023">2023</option>
@@ -101,7 +103,7 @@
             <label for="haveBackupCam" class="quest">
                Est-ce que votre véhicule possède une caméra de recul&nbsp?
             </label>
-            <select id="cam"  name="haveBackupCam">
+            <select id="cam" name="haveBackupCam">
                   <option value="true">Oui</option>
                   <option value="false">Non</option>A une reclamation d'assurance
             </select>
@@ -125,6 +127,7 @@
                   Combien de réclamations avez-vous faites&nbsp?
                </label>
                <select type="text" id="numClaim" name="Claim1" required>
+                  <option disabled selected value> -- choisissez une option -- </option>
                   <option value="1">1 réclamation</option>
                   <option value="2">2 réclamations</option>
                   <option value="3">3 réclamations</option>
@@ -166,7 +169,9 @@
                </div>
             </div>
          </div>
-         <input type="submit" value="Submit">
+         <div class="row">
+         <button type="submit" value="Submit">Soumission</button>
+         </div>
       </form>
    </body>
 </html>
